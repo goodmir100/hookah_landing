@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="spot" cx="50%" cy="36%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="45%" stop-color="#1A4BFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0B0B0C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111114"/>
+      <stop offset="60%" stop-color="#0B0B0C"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e9edf5"/>
+      <stop offset="38%" stop-color="#8f9bb3"/>
+      <stop offset="62%" stop-color="#3a4152"/>
+      <stop offset="100%" stop-color="#c9d2e3"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A4BFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0a1f66" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- penthouse bokeh -->
+  <g filter="url(#soft)" opacity="0.75">
+    <circle cx="250" cy="210" r="120" fill="#1A4BFF" opacity="0.30"/>
+    <circle cx="1360" cy="260" r="150" fill="#ffffff" opacity="0.08"/>
+    <circle cx="1180" cy="640" r="130" fill="#1A4BFF" opacity="0.16"/>
+    <circle cx="430" cy="700" r="110" fill="#ffffff" opacity="0.06"/>
+    <circle cx="820" cy="150" r="90" fill="#1A4BFF" opacity="0.14"/>
+  </g>
+
+  <!-- spotlight -->
+  <rect width="1600" height="900" fill="url(#spot)"/>
+
+  <!-- blurred Downtown Dubai skyline -->
+  <g opacity="0.30" filter="url(#soft)">
+    <path fill="#0a0a0c" d="M0 900V600h70v-90h40v90h60V520h54v80h70V470h30V360h26v110h30v130h60V560h80v40h70V500h60v100h90V430h28V330h22v100h28v140h70V540h80v60h70V480h64v120h80V560h60v40h90V500h70v100h90V590h70v-70h50v70h60V520h70v80h70V560h70v340Z"/>
+  </g>
+  <!-- Burj Khalifa outline -->
+  <g opacity="0.55" fill="#16171b">
+    <path d="M792 900V300l8-70 8 70v600Zm-16 0V360h32v540Z"/>
+    <path d="M800 230l6-56 6 56Z"/>
+  </g>
+
+  <!-- luxury shisha hardware, spotlighted -->
+  <g transform="translate(800 470)">
+    <!-- base -->
+    <ellipse cx="0" cy="250" rx="96" ry="26" fill="#0d0e11" opacity="0.9"/>
+    <path d="M-58 250c0-30 26-46 58-46s58 16 58 46Z" fill="url(#metal)"/>
+    <rect x="-30" y="180" width="60" height="34" rx="8" fill="url(#metal)"/>
+    <!-- glass vessel -->
+    <path d="M-52 180c0-16 22-26 52-26s52 10 52 26-14 40-52 40-52-24-52-40Z" fill="url(#glass)" opacity="0.92"/>
+    <ellipse cx="0" cy="150" rx="52" ry="12" fill="#0b1b52" opacity="0.6"/>
+    <!-- stem -->
+    <rect x="-9" y="30" width="18" height="126" rx="8" fill="url(#metal)"/>
+    <circle cx="0" cy="28" r="16" fill="url(#metal)"/>
+    <!-- tray -->
+    <ellipse cx="0" cy="34" rx="86" ry="14" fill="#20232b"/>
+    <ellipse cx="0" cy="30" rx="86" ry="14" fill="url(#metal)"/>
+    <!-- bowl -->
+    <path d="M-26 4c0-22 12-34 26-34s26 12 26 34-12 18-26 18-26 4-26-18Z" fill="#2b2f3a"/>
+    <ellipse cx="0" cy="-30" rx="26" ry="8" fill="#3b4150"/>
+    <!-- embers -->
+    <circle cx="-6" cy="-36" r="4" fill="#ff6a2b" opacity="0.9"/>
+    <circle cx="7" cy="-34" r="3" fill="#ffb347" opacity="0.85"/>
+    <circle cx="1" cy="-40" r="2.4" fill="#ff3d00" opacity="0.8"/>
+    <!-- hose -->
+    <path d="M60 120c70 10 110 60 96 130-8 42-46 62-84 54" fill="none" stroke="url(#metal)" stroke-width="16" stroke-linecap="round"/>
+    <rect x="66" y="292" width="26" height="40" rx="10" fill="#20232b"/>
+  </g>
+
+  <!-- ember glow -->
+  <circle cx="800" cy="430" r="120" fill="#1A4BFF" opacity="0.14" filter="url(#soft)"/>
+  <rect width="1600" height="900" fill="url(#bg)" opacity="0.25"/>
+</svg>
