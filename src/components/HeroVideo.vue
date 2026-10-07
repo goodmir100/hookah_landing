@@ -5,21 +5,47 @@ import { addToBag } from '../store'
 
 const ready = ref(false)
 const saved = ref(false)
+const videoEl = ref(null)
 const zone = ref(zones.value[0])
 const phone = ref('')
 const price = 189
 
-onMounted(() => requestAnimationFrame(() => (ready.value = true)))
+onMounted(async () => {
+  requestAnimationFrame(() => (ready.value = true))
+
+  const v = videoEl.value
+  if (!v) return
+
+  /* respect reduced-motion: keep the poster frame instead of playing */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    v.removeAttribute('autoplay')
+    v.pause()
+    return
+  }
+
+  try {
+    await v.play()
+  } catch {
+    /* autoplay blocked — poster frame stays visible */
+  }
+})
 </script>
 
 <template>
   <section class="relative isolate flex min-h-svh items-center overflow-hidden pb-16 pt-28 md:pt-32">
     <!-- cinematic plate: metallic shisha hardware, glowing embers, dark ambient smoke, blurred Downtown Dubai skyline -->
-    <img
-      src="/media/hero-video-poster.webp"
-      alt="Luxury metallic hookah with glowing embers against a blurred Downtown Dubai night skyline"
-      class="absolute inset-0 -z-20 size-full animate-kenburns object-cover"
-    />
+    <video
+      ref="videoEl"
+      class="absolute inset-0 -z-20 size-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="/media/hero-video-poster.jpg"
+    >
+      <source src="/media/shisha-hero.mp4" type="video/mp4" />
+    </video>
 
     <!-- heavy dark backdrop layer -->
     <div class="absolute inset-0 -z-10 bg-black/65 backdrop-blur-[2px]"></div>
