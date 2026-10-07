@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import Navbar from './components/Navbar.vue'
 import HeroVideo from './components/HeroVideo.vue'
 import HeroPhoto from './components/HeroPhoto.vue'
+import Products from './components/Products.vue'
+import Footer from './components/Footer.vue'
 
 const heroVariant = ref('video')
 </script>
@@ -16,7 +18,11 @@ const heroVariant = ref('video')
         <HeroVideo v-if="heroVariant === 'video'" key="video" />
         <HeroPhoto v-else key="photo" />
       </Transition>
+
+      <Products />
     </main>
+
+    <Footer />
 
     <!-- variant switch control -->
     <div

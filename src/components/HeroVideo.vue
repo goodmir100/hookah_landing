@@ -14,18 +14,12 @@ onMounted(() => requestAnimationFrame(() => (ready.value = true)))
 
 <template>
   <section class="relative isolate flex min-h-svh items-center overflow-hidden pb-16 pt-28 md:pt-32">
-    <!-- cinematic video plate: metallic shisha hardware, glowing embers, dark ambient smoke, blurred Downtown Dubai skyline -->
-    <video
-      class="absolute inset-0 -z-20 size-full object-cover"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      poster="/media/shisha-hero-poster.svg"
-    >
-      <source src="/media/shisha-hero.mp4" type="video/mp4" />
-    </video>
+    <!-- cinematic plate: metallic shisha hardware, glowing embers, dark ambient smoke, blurred Downtown Dubai skyline -->
+    <img
+      src="/media/hero-video-poster.webp"
+      alt="Luxury metallic hookah with glowing embers against a blurred Downtown Dubai night skyline"
+      class="absolute inset-0 -z-20 size-full animate-kenburns object-cover"
+    />
 
     <!-- heavy dark backdrop layer -->
     <div class="absolute inset-0 -z-10 bg-black/65 backdrop-blur-[2px]"></div>

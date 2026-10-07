@@ -34,7 +34,7 @@ function reset() {
   >
     <!-- studio banner plate: spotlighted luxury hardware, deep penthouse bokeh -->
     <img
-      src="/media/shisha-hero.svg"
+      src="/media/hero-photo.webp"
       alt="Luxury hookah studio shot under spotlight"
       class="absolute inset-0 -z-20 size-full object-cover transition-transform duration-500 ease-out will-change-transform"
       :style="{ transform: `translate3d(${px * -14}px, ${py * -14}px, 0) scale(1.08)` }"
